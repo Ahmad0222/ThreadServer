@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
-const url = "mongodb://127.0.0.1:27017/threads";
+const url = "mongodb://127.0.0.1:27017/Threads";
+
 ConnectToMongo = () => {
   mongoose.set("strictQuery", false);
+
   mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -12,5 +14,4 @@ ConnectToMongo = () => {
     console.log("Connected to MongoDB");
   });
 };
-
 module.exports = ConnectToMongo;

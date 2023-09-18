@@ -17,9 +17,6 @@ const CategorySchema = new Schema({
             slug: {
                 type: String,
             },
-            photo: {
-                type: Array,
-            }
         }
     ],
     photo: {
