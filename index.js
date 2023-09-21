@@ -4,7 +4,7 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser')
 ConnectToMongo();
 const app = express()
-const port = process.env.PORT || 5000;
+const port = 5007;
 app.use(express.json())
 app.use(cors());
 app.use(cookieParser());
@@ -20,8 +20,8 @@ app.get('/', (req, res) => {
     res.send("Welcome to Threads & Treasures");
 })
 
-app.use('/api/uploads/images', express.static('uploads/images'));
-app.use('/api/uploads/files', express.static('uploads/files'));
+app.use('/uploads/images', express.static('uploads/images'));
+app.use('/uploads/files', express.static('uploads/files'));
 app.use('/api/user', require('./routes/user'));
 app.use('/api/file', require('./routes/file'));
 app.use('/api/product', require('./routes/product'));

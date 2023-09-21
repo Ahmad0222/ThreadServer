@@ -7,7 +7,6 @@ const createModel = asyncHandler(async (req, res) => {
     const { name, brand } = req.body;
     const model = new Model({
         name: name,
-        slug: slug,
         brand: brand
     });
     const newModel = await model.save();

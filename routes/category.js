@@ -4,7 +4,7 @@ const getAdmin = require("../middleware/getAdmin");
 
 const { createCategory, updateCategory, deleteCategory, getAllCategories, deleteSubCategory } = require("../controllers/categoryController");
 
-router.route("/").get(getAllCategories).post(getAdmin, createCategory);
+router.route("/").get(getAllCategories).post(createCategory);
 router.route("/:id").put(getAdmin, updateCategory).delete(getAdmin, deleteCategory);
 router.route("/sub-category/:id").delete(getAdmin, deleteSubCategory);
 

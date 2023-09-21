@@ -80,7 +80,7 @@ const deleteSubCategory = asyncHandler(async (req, res) => {
         category.subCategory = category.subCategory.filter((subCat) => subCat._id != subId);
         const updatedCategory = await category.save();
         res.status(201).json(updatedCategory);
-    } else {
+    } else { 
         res.status(404);
         throw new Error('Category not found');
     }

@@ -9,7 +9,7 @@ const uploadFile = asyncHandler(async (req, res) => {
         error.httpStatusCode = 400;
         return next(error);
     }
-    const url = req.protocol + "s://" + req.get("host");
+    const url = req.protocol + "://" + req.get("host");
 
     for (var i = 0; i < req.files.length; i++) {
         images.push(url + "/uploads/images/" + req.files[i].filename);
